@@ -62,7 +62,8 @@
 		HXManager.getIns().init(this, getPackageName());//默认自动登录 
 		HXManager.getIns().init(this, getPackageName(),false);//设置为不自动登录 
 2. 登录  
-	HXManager内部处理：登录的时候先注册，然后进行登录，注册失败会直接跑出异常捕捉这个异常，可以不进行其他处理。这里的token和password由第一次登录上服务器，登录成功之后返回的数据（数据安全方面的考虑）。在登录聊天服务器成功之后，最好直接加载对话列表（环信文档推荐）
+	HXManager内部处理：登录的时候先注册，然后进行登录，注册失败会直接跑出异常捕捉这个异常，可以不进行其他处理。这里的token和password由第一次登录上服务器，登录成功之后返回的数据（数据安全方面的考虑）。在登录聊天服务器成功之后，最好直接加载对话列表（环信文档推荐）  
+
 		HXManager.getIns().login(new HXUser(name, pwd), new HXCallback() {
                     @Override
                     public void onSuccess() {
